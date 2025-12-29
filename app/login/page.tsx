@@ -34,11 +34,14 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-rose-50 px-4">
-      <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 space-y-6">
+    <div
+      className="min-h-screen flex items-center justify-start px-4 bg-cover bg-center relative pl-20"
+      style={{ backgroundImage: "url('https://qcycgxfglxaszrvutoqn.supabase.co/storage/v1/object/public/AniPhoto/background.png')" }}
+    >
+      <div className="max-w-md w-full bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-8 space-y-6 relative z-10 border border-white/20">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-rose-600">Kỷ Niệm 3 Năm ❤️</h1>
-          <p className="text-gray-500 mt-2">Đăng nhập để xem bất ngờ nhé</p>
+          <h1 className="text-3xl font-bold text-rose-600">Kỷ Niệm 3 Năm bên nhau của Dũng và Thanh❤️</h1>
+          <p className="text-gray-500 mt-2">Liên hệ với DungAnhHa để cho phép đăng nhập, ai cho xem chùa😒</p>
         </div>
 
         <form onSubmit={handleLogin} className="space-y-4">
