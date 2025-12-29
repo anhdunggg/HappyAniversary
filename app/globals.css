@@ -19,6 +19,22 @@
   }
 }
 
+@keyframes kiss {
+
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(1.1) rotate(-5deg) translateX(-5px);
+  }
+}
+
+.animate-kiss {
+  animation: kiss 2s infinite ease-in-out;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

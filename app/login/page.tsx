@@ -91,6 +91,13 @@ export default function LoginPage() {
           </button>
         </form>
       </div>
+      <div className="absolute bottom-4 right-4 z-20 pointer-events-none select-none">
+        <img
+          src="https://qcycgxfglxaszrvutoqn.supabase.co/storage/v1/object/public/AniPhoto/kissing_couple_action.gif"
+          alt="Kissing Animation"
+          className="w-48"
+        />
+      </div>
     </div>
   );
 }
