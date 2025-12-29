@@ -24,7 +24,16 @@ export default function LoginPage() {
 
     if (error) {
       console.error('Login error:', error);
-      setErrorMsg(error.message || 'Đăng nhập thất bại');
+      const funnyErrors = [
+        "Sai rồi nè, thử lại đi cưng 😜",
+        "Nhập sai pass rồi, có phải Thanh hông vậy? 🤔",
+        "Đừng hack nha, Dũng biết hết đó! 😎",
+        "Sai quá sai, thử lại lần nữa xem nào! 🦄",
+        "Không đúng, không cho vào đâu nhé! 😝",
+        "Cố nhớ lại xem nào, pass dễ mà! 🥺"
+      ];
+      const randomError = funnyErrors[Math.floor(Math.random() * funnyErrors.length)];
+      setErrorMsg(randomError);
       setLoading(false);
     } else {
       // Đăng nhập thành công -> Chuyển hướng về trang chủ
@@ -40,7 +49,7 @@ export default function LoginPage() {
     >
       <div className="max-w-md w-full bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-8 space-y-6 relative z-10 border border-white/20">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-rose-600">Kỷ Niệm 3 Năm bên nhau của Dũng và Thanh❤️</h1>
+          <h1 className="text-4xl md:text-5xl text-rose-600 font-[family-name:var(--font-great-vibes)] py-2">Kỷ Niệm 3 Năm bên nhau của Dũng và Thanh❤️</h1>
           <p className="text-gray-500 mt-2">Liên hệ với DungAnhHa để cho phép đăng nhập, ai cho xem chùa😒</p>
         </div>
 
@@ -68,7 +77,7 @@ export default function LoginPage() {
           </div>
 
           {errorMsg && (
-            <div className="text-red-500 text-sm text-center bg-red-50 p-2 rounded">
+            <div className="text-rose-500 text-sm font-medium text-center bg-rose-50 p-3 rounded-xl border-2 border-rose-100 animate-bounce">
               {errorMsg}
             </div>
           )}
